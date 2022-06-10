@@ -1,13 +1,13 @@
 import pandas as pd
-import snscrape.modules.twitter as sntwitter
+import snscrape.modules.twitter as sns
 import itertools
 
 
 username = input('Enter a username: ')
 topic = input('Enter a topic you want to scrape: ')
 
-user_tweet = sntwitter.TwitterUserScraper(username).get_items()
-topic_tweet = sntwitter.TwitterSearchScraper(topic).get_items()
+user_tweet = sns.TwitterUserScraper(username).get_items()
+topic_tweet = sns.TwitterSearchScraper(topic).get_items()
 
 
 count_username = itertools.islice(user_tweet, 500)
